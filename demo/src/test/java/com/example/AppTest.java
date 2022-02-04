@@ -1,51 +1,57 @@
 package com.example;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Assert;
 import org.junit.Test;
 
+import static org.junit.Assert.*;
 
-public class AppTest 
-{
-   
+
+public class AppTest {
+    //True assertion
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void isTrue() {
+        assertTrue(true);
+    }
+    //False assertion
+    @Test
+    public void isFalse(){assertFalse(false);}
+    //Equals assertion
+    @Test
+    public void AdditionTest() {
+
+        final int expected = 20;
+        final int actual = App.add(10, 10);
+        Assert.assertEquals(expected, actual);
     }
     @Test
-    public void add_TwoPlusTwo_ReturnsFour() {
-      // Arrange
-      final int expected = 4;
-  
-      // Act
-      final int actual = App.add(2, 2);
-  
-      // Assert
-      Assert.assertEquals(expected, actual);
-    }    
-    @Test
-    public void multiply_FourTimesTwo_ReturnsEight() {
-      // Arrange
-      final int expected = 8;
-  
-      // Act
-      final int actual = App.multiply(4, 2);
-  
-      // Assert
-      Assert.assertEquals(expected, actual);
-    }        
+    public void SubtractionTest() {
 
+        final int expected = 100;
+        final int actual = App.subtract(110,10);
+        Assert.assertEquals(expected, actual);
+
+    }
     @Test
-    public void divide_TenDividedTwo_ReturnsFive() {
-      // Arrange
-      final int expected = 5;
-  
-      // Act
-      final int actual = App.divide(10, 2);
-  
-      // Assert
-      Assert.assertEquals(expected, actual);
-    }           
+    public void MultiplicationTest() {
+
+        final int expected = 80;
+
+
+        final int actual = App.multiply(8, 10);
+
+
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void DivisionTest() {
+
+        final int expected = 65;
+
+
+        final int actual = App.divide(650, 10);
+
+
+        Assert.assertEquals(expected, actual);
+    }
+
 }
