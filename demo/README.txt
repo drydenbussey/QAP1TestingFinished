@@ -1,4 +1,3 @@
 SUMMARY:
-
-First class was app.java and the test. Just a simple calculator.
-The second class was testing to see if my name was found through the testing.
+app test methods: used to test simple math problems to see if they were correct
+app test 2 methods: used to test if null and is true and is false assertions
